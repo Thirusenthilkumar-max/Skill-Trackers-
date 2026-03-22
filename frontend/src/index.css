@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-gradient-to-br from-[#0f0f0f] to-[#1a1a2e] text-white min-h-screen font-sans antialiased overflow-x-hidden;
+  }
+}
+
+@layer components {
+  /* Glassmorphism Card Style */
+  .glass-card {
+    @apply bg-white/5 backdrop-blur-md border border-white/10 shadow-lg rounded-2xl;
+  }
+  
+  /* Neon Glow Utilities */
+  .neon-cyan {
+    @apply shadow-[0_0_15px_rgba(0,245,255,0.6)];
+  }
+  .neon-pink {
+    @apply shadow-[0_0_15px_rgba(255,0,255,0.6)];
+  }
+  
+  /* Glowing Text */
+  .text-glow-cyan {
+    text-shadow: 0 0 10px rgba(0,245,255,0.8);
+  }
+  
+  /* Primary Button */
+  .btn-primary {
+    @apply relative overflow-hidden px-6 py-2 rounded-full bg-transparent border border-[#00f5ff] text-[#00f5ff] font-semibold transition-all duration-300 hover:bg-[#00f5ff]/10 hover:shadow-[0_0_20px_rgba(0,245,255,0.5)];
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0f0f0f;
+}
+::-webkit-scrollbar-thumb {
+  background: #1a1a2e;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #00f5ff;
+}
